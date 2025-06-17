@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List with Progress Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Add Font Awesome CDN for search icon -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <h2>To-Do<img src="todo.png" alt=""></h2>
+            
+            <!-- Progress Tracker -->
+            <div class="progress-container">
+                <span>Progress: <span id="progress-percentage">0%</span></span>
+                <div class="progress-bar">
+                    <div id="progress-bar-fill"></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add a new task here...">
+                <button class="add">Add</button> 
+            </div>
+
+            <!-- Search bar with icon -->
+            <div class="search-container">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" id="search-box" placeholder="Search tasks...">
+            </div>
+
+            <ul id="list-container">
+            </ul>        
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

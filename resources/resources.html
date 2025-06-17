@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Hub</title>
+  <link rel="stylesheet" href="resources.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h2>Resource Hub</h2>
+        <button id="sidebar-toggle" class="sidebar-toggle">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+      <div class="sidebar-content">
+        <ul class="nav-menu">
+          <li class="nav-item active" data-content="coding-resources">
+            <i class="fas fa-code"></i>
+            <span>Coding Resources</span>
+          </li>
+          <li class="nav-item" data-content="practice-projects">
+            <i class="fas fa-project-diagram"></i>
+            <span>Practice Coding</span>
+          </li>
+          <li class="nav-item" data-content="high-demand-skills">
+            <i class="fas fa-chart-line"></i>
+            <span>High Demand Skills</span>
+          </li>
+          <li class="nav-item" data-content="learning-roadmaps">
+            <i class="fas fa-road"></i>
+            <span>Learning Roadmaps</span>
+          </li>
+          <li class="nav-item" data-content="free-tutorials">
+            <i class="fas fa-laptop-code"></i>
+            <span>Free Tutorials</span>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+    <div class="main-content" id="main-content">
+      <!-- Content will be dynamically loaded here -->
+      <div id="content-container"></div>
+    </div>
+  </div>
+  <!-- Script to dynamically load content -->
+  <script src="resources.js"></script>
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+</body>
+</html>

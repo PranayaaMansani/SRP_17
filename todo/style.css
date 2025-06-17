@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    font-weight: 550;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(11, 159, 239, 0.5), #000); 
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: white;
+    margin: 40px auto 70px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app img {
+    width: 6vh;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e3e6eb;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+    font-size: 18px;
+}
+
+.add {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: rgb(34, 108, 26);
+    color: #fff;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    font-size: 18px;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(uncheck.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url(badge.png);
+}
+
+ul li span {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+ul li span:hover {
+    background-color: #edeef0;
+}
+
+/* Progress Bar Styles */
+.progress-container {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
+}
+
+.progress-bar {
+    background-color: #ddd;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    margin-top: 10px;
+    position: relative;
+}
+
+#progress-bar-fill {
+    background-color: #0c6211; /* Green color */
+    height: 100%;
+    width: 0%; /* Initial width (0%) */
+    border-radius: 10px;
+    position: absolute;
+    transition: width 0.3s ease;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}

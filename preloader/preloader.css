@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+.hero {
+    background-color: #fff;
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    /* background-image: url('/images/background.jpg'); Add your image path here */
+    padding: 10px 5%;
+    position: relative;
+    
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px 50px;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #9bbae8;
+    z-index: 999;
+}
+body{
+    padding-top: 80px;
+}
+.logo{
+ width: 140px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 15px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+
+}
+.btn , .login-btn{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 25px; /* Less padding = smaller button */
+    background: linear-gradient(135deg, #002366, #0056b3);
+    background-color: #002366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 35, 102, 0.3);
+}
+.login-btn{
+    padding: 7px 20px;
+}
+.btn:hover , .login-btn:hover{
+    background: linear-gradient(135deg, #013164, #1663b5);
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 35, 102, 0.4);}
+.btn:active , .login-btn{
+    transform: scale(0.98); /* Press effect */
+    box-shadow: 0 2px 8px rgba(0, 35, 102, 0.2);
+}
+
+.content{
+    margin-top: 5%;
+    max-width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    max-width: 600px;
+    text-align: center;
+}
+.content h1{
+    font-size: 50px;
+    color:#222;
+    font-family: 'Playfair Display', serif;
+    
+}
+.content p{
+    margin: 10px 0 30px;
+    color: #333;
+    animation-delay: 0.5s;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+.content .btn{
+    padding: 15px 50px;
+    font-size: 16px;
+    animation-delay: 1s;
+}
+.feature-img {
+    width: 430px;
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.feature-img.anim{
+    animation-delay: 1.5s;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+@keyframes moveup{
+100%{
+    opacity: 1;
+    transform: translateY(0px);
+}
+}
+#login-form{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}   
+.form-box{
+    width: 380px;
+    height: 440px;
+    position: relative;
+    margin: 2% auto;
+    background: linear-gradient(135deg, rgb(1, 49, 100,1), rgb(22, 99, 181,0.4));
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(193, 192, 192, 0.2);
+    overflow: hidden;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 9px rgba(140, 153, 198, 0.2);
+    border-radius: 30px;
+}
+.toggle-btn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: #D0E0D0;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.input-group-login{
+    top: 150px;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+}
+.input-group-register{
+    top: 120px;
+    position: absolute;
+    width: 280px;
+    transform: 0.5s;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.submit-btn{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: #D0E0D0;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+.check-box{
+    margin: 30px 10px 34px 0;
+}
+span{
+    color: #000;
+    font-size: 12px;
+    bottom: 68px;
+    position: absolute;
+}
+#login{
+    left: 50px;
+}
+#login input{
+    color: white;
+    font-size: 15;
+}
+#register{
+    left: 450px;
+}
+#register input{
+    color: white;
+    font-size: 15;
+}
+.input-field::placeholder {
+    color: #fff;
+    opacity: 1;
+}
+#more-content{
+    text-align: center;
+}   
+.floating-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* So they don't block clicks */
+}
+
+.float-img {
+    position: absolute;
+    width: 60px; /* adjust size */
+    opacity: 0;
+    animation: popIn 2s ease forwards;
+}
+
+.img-book { top: 15%; left: 8%; animation-delay: 0.5s; }
+.img-pencil { top: 25%; right: 10%; animation-delay: 1s; }
+.img-laptop { bottom: 20%; left: 12%; animation-delay: 1.5s; }
+.img-scale { bottom: 15%; right: 12%; animation-delay: 2s; }
+
+@keyframes popIn {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.floating-icons {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So user clicks go through */
+    overflow: hidden;
+    z-index: 1;
+}
+
+.floating-icons .icon {
+    position: absolute;
+    width: 50px; /* Size of the icons */
+    animation: float 6s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}

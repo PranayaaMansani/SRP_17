@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preloader</title>
+    <link rel="stylesheet" href="preloader.css">
+</head>
+<body>
+    <div class="hero">
+        <!-- <img src="/images/background.jpg" height="100vh"alt=""> -->
+        <div class="floating-icons">
+            <img src="/images/pencil.png" class="icon" style="top: 20%; right: 30%;">
+            <img src="/images/brain.png" class="icon" style="bottom: 85%; left: 50%;">
+            <img src="/images/notebook.png" class="icon" style="bottom: 30%; right: 40%;">
+            <img src="/images/clock.png" class="icon" style="top: 75%; left: 25%;">
+            <img src="/images/push-pins.png" class="icon" style="top: 20%; left: 10%;">
+            <img src="/images/puzzle.png" class="icon" style="top: 20%; left: 30%;">
+            <img src="/images/tape.png" class="icon" style="top: 40%; left: 20%;">
+        </div>
+        
+        <nav>
+            <img src="/images/LOGO.png" class="logo">
+            <ul>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Privacy</a></li>
+            </ul>
+            <div>
+                <button class="login-btn" onclick="document.getElementById('login-form').style.display='block'"style="width:auto;">Login</button>
+            </div>
+        </nav>
+        <div class="content">
+            <h1 class="anim">Start <br>Studying Now!!</h1>
+            <p class="anim">StudyHub – Your all-in-one platform for study resources, task management, reminders, and collaborative learning!</p>
+            <a href="#more-content" class="btn anim">Get Started</a>
+        </div>
+        <div class="floating-images">
+            <img src="/images/target.png" class="float-img img-pencil" alt="Pencil" style="top: 40%; left: 80%;">
+            <img src="/images/laptop.png" class="float-img img-laptop" alt="Laptop" style="top: 60%; left: 10%;">
+            <img src="/images/bag.png" class="float-img img-scale" alt="Bag" style="top: 70%; left: 80%;">
+        </div>
+        
+        <div id="login-form" class="login-page">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="btn"></div>
+                    <button type="button" onclick="login()" class="toggle-btn">Log In</button>
+                    <button type="button" onclick="register()" class="toggle-btn">Register</button>
+                </div>
+                <!--creating login form-->
+                <form id="login" class="input-group-login">
+                    <input type="text" class="input-field" placeholder="Email Id"required>
+                    <input type="password" class="input-field" placeholder="Email Password"required>
+                    <input type="checkbox" class="check-box"><span>Remember Password</span>
+                    <button type="submit" class="submit-btn">Log In</button>
+                </form>
+                <form id="register" class="input-group-register">
+                    <input type="text" class="input-field" placeholder="First Name"required>
+                    <input type="email" class="input-field" placeholder="Email Id"required>
+                    <input type="password" class="input-field" placeholder="Enter Password"required>
+                    <input type="password" class="input-field" placeholder="Confirm Password"required>
+                    <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+                    <button type="submit" class="submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--code for the login and registration form to move accordingly-->
+    <script>
+        var x=document.getElementById('login');
+        var y=document.getElementById('register');
+        var z=document.getElementById('btn');
+        function register()
+        {
+            x.style.left='-400px';
+            y.style.left='50px';
+            z.style.left='110px';
+        }
+        function login()
+        {
+            x.style.left='50px';
+            y.style.left='450px';
+            z.style.left='0px';
+        }
+    </script>
+    <!--code for the form box to disappear when 
+    you click login or register-->
+    <script>
+        var modal=document.getElementById('login-form');
+        window.onclick=function(event){
+         if(event.target==modal)
+         {
+            modal.style.display="none";
+         }
+        }
+    </script>
+    <!--when you click on get started button-->
+    <section id="more-content">
+        <h2>More Content Here</h2>
+        <p>This is additional content below the hero section.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe voluptatem exercitationem nam ipsam voluptates, perspiciatis aut voluptas ipsum, ex vel architecto enim rem explicabo at quos placeat. Assumenda, ut esse.
+            Nulla, quisquam commodi tenetur soluta temporibus nemo dolores hic minus! Qui assumenda obcaecati quibusdam molestiae, minus ad? Mollitia quia alias explicabo incidunt, odit repellendus praesentium vel aliquam blanditiis impedit eaque?
+            Dolor, possimus adipisci! Facilis error, odio recusandae quasi eum maiores cum deserunt inventore aliquid similique doloremque adipisci provident ad quisquam temporibus eligendi, id soluta exercitationem unde labore, veniam ullam nobis.
+            Culpa laboriosam at esse amet! Facere veritatis commodi earum repudiandae eius doloremque porro ipsa modi, pariatur corporis incidunt cum atque tempore expedita eaque vero repellat repellendus voluptatum neque, animi facilis.
+            Praesentium magnam modi temporibus illo repellat eaque vitae consequatur tempore, quod doloribus iusto nam suscipit, facere, nisi sunt natus et porro nostrum magni officiis veniam. Aliquam nihil pariatur reprehenderit voluptate.
+            Exercitationem velit nostrum odio expedita maiores? Dolore porro atque iure magnam temporibus alias nesciunt accusantium culpa. Cupiditate reprehenderit voluptatem unde praesentium voluptate reiciendis quam doloribus nemo repellat qui! Ipsa, cumque.
+            Vitae et beatae, nihil debitis consequuntur excepturi rem impedit maxime corporis ipsum ratione molestiae id repudiandae nobis ex! Mollitia similique voluptate itaque blanditiis nobis culpa at explicabo ipsa nulla perspiciatis.
+            Obcaecati illum repudiandae sapiente modi asperiores quos est in officia, accusamus fugiat fugit ducimus quia commodi voluptate eum odio eius. Aspernatur perspiciatis eligendi officia adipisci quo corrupti. Porro, expedita voluptate.
+            Sit facere inventore provident aliquid blanditiis ipsum iste! A cumque repellat velit maiores maxime, impedit magni excepturi qui quae. Maiores magni incidunt porro rerum veritatis! Aspernatur quia officia dolorem laboriosam.
+            Officia, sapiente exercitationem quam beatae distinctio ratione et quaerat culpa harum quibusdam, dignissimos nemo optio, pariatur obcaecati molestias! Saepe, quibusdam beatae recusandae atque mollitia voluptatibus vel at! Harum, placeat quo.
+        </p>
+    </section>
+       
+
+    
+</body>
+</html>

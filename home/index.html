@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans&family=Inter&family=Manrope&family=Mulish&family=Quicksand&family=Rubik&family=Work+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Bebas+Neue&family=Exo+2&family=Merriweather+Sans&family=Poppins&family=Rajdhani&family=Teko&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <img src="/images/LOGO.png" height="70px" alt="">
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="\resources\resources.html">Resources</a></li>
+      <li><a href="\todo\index.html">To-Do</a></li>
+      <li><a href="\calender\calender.html">Remainders</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="\aboutus\aboutus.html">About-Us</a></li>
+    </ul>
+  </nav>
+  <section id="home" class="hero">
+    <h1 id="hero-heading">Unlock Your Potential</h1>
+    <p>Plan your journey and Empower yourself with the best online courses!</p>
+    <a href="#courses" class="btn">Start Learning</a>
+  </section>
+</header>
+
+<section id="resources">
+    <h2>Resources Hub</h2>
+    <p>Expand your knowledge with these helpful materials curated by experts.</p>
+    <div class="resources-list">
+        <div class="resource-card">
+            <h3>Coding Resources</h3>
+            <p>Access free downloadable study materials for your learning journey.</p>    
+        </div>
+        <div class="resource-card">
+            <h3>High Demand Skills</h3>
+            <p>Watch in-depth tutorials to strengthen your understanding of key topics.</p>
+        </div>
+        <div class="resource-card">
+            <h3>Free Tutorials</h3>
+        <p>Get free templates, worksheets, and productivity tools for students.</p>
+      </div>
+    </div>
+    <div class="view-resources-btn">
+      <a href="http://127.0.0.1:5500/resources/resources.html" class="btn">View Resources</a>
+    </div>
+  </section>
+
+
+<section id="contact">
+  <h2 style="color:#101010">Contact Us</h2>
+  <p>Have any questions? Reach out to us today!</p>
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="13dccdef-cdde-4d45-b0c0-8c556dba1a8c">
+    
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    
+    <button type="submit" class="btn">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Study Hub. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
